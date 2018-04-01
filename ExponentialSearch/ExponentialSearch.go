@@ -3,22 +3,19 @@ package main
 const arraySize = 10
 
 func ExponentialSearch(array [arraySize]int, number int) int {
-	if array[0] == number {
-		return 0
-	}
 	boundValue := 1
 	for boundValue < len(array) && array[boundValue] < number {
 		boundValue *= 2
 	}
 	if boundValue > len(array) {
-		boundValue = len(array)
+		boundValue = len(array) - 1
 	}
-	return BinarySearch(array, boundValue, number)
+	return BinarySearch(array, boundValue+1, number)
 }
 
 func BinarySearch(array [arraySize]int, bound, number int) int {
 	minIndex := 0
-	maxIndex := bound
+	maxIndex := bound - 1
 	for minIndex <= maxIndex {
 		midIndex := int((maxIndex + minIndex) / 2)
 		midItem := array[midIndex]

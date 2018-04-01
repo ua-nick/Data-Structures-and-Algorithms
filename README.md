@@ -12,6 +12,7 @@ There are several data structures and algorithms implemented in this project. Th
 - Doubly Linked List
 - Stack
 - Queue
+- Binary Tree
 
 ##### Searching algorithms
 - Linear Search

@@ -4,7 +4,7 @@ const arraySize = 10
 
 func TernarySearch(array [arraySize]int, number int) int {
 	minIndex := 0
-	maxIndex := len(array)
+	maxIndex := len(array) - 1
 	for minIndex <= maxIndex {
 		midIndex1 := minIndex + int((maxIndex-minIndex)/3)
 		midIndex2 := maxIndex - int((maxIndex-minIndex)/3)

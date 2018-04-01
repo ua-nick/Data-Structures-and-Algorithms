@@ -4,7 +4,7 @@ const arraySize = 10
 
 func BinarySearch(array [arraySize]int, number int) int {
 	minIndex := 0
-	maxIndex := len(array)
+	maxIndex := len(array) - 1
 	for minIndex <= maxIndex {
 		midIndex := int((maxIndex + minIndex) / 2)
 		midItem := array[midIndex]

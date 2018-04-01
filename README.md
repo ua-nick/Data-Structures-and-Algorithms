@@ -29,13 +29,15 @@ There are several data structures and algorithms implemented in this project. Th
 
 ## Usage
 
+The library is not intended for direct use by importing. We strongly recommend copying the necessary implementations and adjusting to your case.
+
 You can download the source using `go get` command:
 
 ```
 go get github.com/floyernick/Data-Structures-and-Algorithms
 ```
 
-Then just copy the required code into your project. Don't forget about proverb:
+Don't forget about proverb:
 > A little copying is better than a little dependency.
 
 ## Contribute

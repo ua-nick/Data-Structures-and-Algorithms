@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type Node struct {
 	data  int
 	left  *Node
@@ -52,12 +50,12 @@ func (tree *BinaryTree) SearchItem(i int) (*Node, bool) {
 	return nil, false
 }
 
-func (tree *BinaryTree) PrintItems(subtree *Node) {
+func (tree *BinaryTree) GetItems(subtree *Node, callback func(int)) {
 	if subtree.left != nil {
-		tree.PrintItems(subtree.left)
+		tree.GetItems(subtree.left, callback)
 	}
-	fmt.Println(subtree.data)
+	callback(subtree.data)
 	if subtree.right != nil {
-		tree.PrintItems(subtree.right)
+		tree.GetItems(subtree.right, callback)
 	}
 }

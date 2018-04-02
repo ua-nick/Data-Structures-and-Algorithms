@@ -1,8 +1,6 @@
 package main
 
-const arraySize = 10
-
-func BubbleSort(array *[arraySize]int) {
+func BubbleSort(array []int) {
 	swapCount := 1
 	for swapCount > 0 {
 		swapCount = 0

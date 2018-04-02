@@ -1,8 +1,6 @@
 package main
 
-const arraySize = 10
-
-func TernarySearch(array [arraySize]int, number int) int {
+func TernarySearch(array []int, number int) int {
 	minIndex := 0
 	maxIndex := len(array) - 1
 	for minIndex <= maxIndex {

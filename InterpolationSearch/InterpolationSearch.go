@@ -1,8 +1,6 @@
 package main
 
-const arraySize = 10
-
-func InterpolationSearch(array [arraySize]int, number int) int {
+func InterpolationSearch(array []int, number int) int {
 	minIndex := 0
 	maxIndex := len(array) - 1
 	for minIndex < maxIndex {

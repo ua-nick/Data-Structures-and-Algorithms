@@ -2,9 +2,7 @@ package main
 
 import "math"
 
-const arraySize = 10
-
-func JumpSearch(array [arraySize]int, number int) int {
+func JumpSearch(array []int, number int) int {
 	jumpValue := int(math.Floor(math.Sqrt(float64(len(array)))))
 	minIndex := 0
 	maxIndex := jumpValue

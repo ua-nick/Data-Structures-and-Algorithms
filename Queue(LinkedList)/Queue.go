@@ -9,7 +9,7 @@ type Queue struct {
 	rear *Node
 }
 
-func (list *Queue) enqueue(i int) {
+func (list *Queue) Enqueue(i int) {
 	data := &Node{data: i}
 	if list.rear != nil {
 		data.next = list.rear
@@ -17,7 +17,7 @@ func (list *Queue) enqueue(i int) {
 	list.rear = data
 }
 
-func (list *Queue) dequeue() (int, bool) {
+func (list *Queue) Dequeue() (int, bool) {
 	if list.rear == nil {
 		return 0, false
 	}
@@ -37,14 +37,14 @@ func (list *Queue) dequeue() (int, bool) {
 	}
 }
 
-func (list *Queue) peek() (int, bool) {
+func (list *Queue) Peek() (int, bool) {
 	if list.rear == nil {
 		return 0, false
 	}
 	return list.rear.data, true
 }
 
-func (list *Queue) get() []int {
+func (list *Queue) Get() []int {
 	var items []int
 	current := list.rear
 	for current != nil {
@@ -54,10 +54,10 @@ func (list *Queue) get() []int {
 	return items
 }
 
-func (list *Queue) isEmpty() bool {
+func (list *Queue) IsEmpty() bool {
 	return list.rear == nil
 }
 
-func (list *Queue) empty() {
+func (list *Queue) Empty() {
 	list.rear = nil
 }

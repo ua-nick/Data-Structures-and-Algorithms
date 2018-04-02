@@ -7,7 +7,7 @@ type Stack struct {
 	data [arraySize]int
 }
 
-func (s *Stack) push(i int) bool {
+func (s *Stack) Push(i int) bool {
 	if s.top == len(s.data) {
 		return false
 	}
@@ -16,7 +16,7 @@ func (s *Stack) push(i int) bool {
 	return true
 }
 
-func (s *Stack) pop() (int, bool) {
+func (s *Stack) Pop() (int, bool) {
 	if s.top == 0 {
 		return 0, false
 	}
@@ -25,18 +25,18 @@ func (s *Stack) pop() (int, bool) {
 	return i, true
 }
 
-func (s *Stack) peek() int {
+func (s *Stack) Peek() int {
 	return s.data[s.top-1]
 }
 
-func (s *Stack) get() []int {
+func (s *Stack) Get() []int {
 	return s.data[:s.top]
 }
 
-func (s *Stack) isEmpty() bool {
+func (s *Stack) IsEmpty() bool {
 	return s.top == 0
 }
 
-func (s *Stack) empty() {
+func (s *Stack) Empty() {
 	s.top = 0
 }

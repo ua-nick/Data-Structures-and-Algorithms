@@ -11,7 +11,7 @@ type LinkedList struct {
 	tail *Node
 }
 
-func (list *LinkedList) insertFirst(i int) {
+func (list *LinkedList) InsertFirst(i int) {
 	data := &Node{data: i}
 	if list.head != nil {
 		list.head.prev = data
@@ -20,7 +20,7 @@ func (list *LinkedList) insertFirst(i int) {
 	list.head = data
 }
 
-func (list *LinkedList) insertLast(i int) {
+func (list *LinkedList) InsertLast(i int) {
 	data := &Node{data: i}
 	if list.head == nil {
 		list.head = data
@@ -34,7 +34,7 @@ func (list *LinkedList) insertLast(i int) {
 	list.tail = data
 }
 
-func (list *LinkedList) removeByValue(i int) bool {
+func (list *LinkedList) RemoveByValue(i int) bool {
 	if list.head == nil {
 		return false
 	}
@@ -62,7 +62,7 @@ func (list *LinkedList) removeByValue(i int) bool {
 	return false
 }
 
-func (list *LinkedList) removeByIndex(i int) bool {
+func (list *LinkedList) RemoveByIndex(i int) bool {
 	if list.head == nil {
 		return false
 	}
@@ -88,7 +88,7 @@ func (list *LinkedList) removeByIndex(i int) bool {
 	return true
 }
 
-func (list *LinkedList) searchValue(i int) bool {
+func (list *LinkedList) SearchValue(i int) bool {
 	if list.head == nil {
 		return false
 	}
@@ -102,14 +102,14 @@ func (list *LinkedList) searchValue(i int) bool {
 	return false
 }
 
-func (list *LinkedList) getFirst() (int, bool) {
+func (list *LinkedList) GetFirst() (int, bool) {
 	if list.head == nil {
 		return 0, false
 	}
 	return list.head.data, true
 }
 
-func (list *LinkedList) getLast() (int, bool) {
+func (list *LinkedList) GetLast() (int, bool) {
 	if list.head == nil {
 		return 0, false
 	}
@@ -120,7 +120,7 @@ func (list *LinkedList) getLast() (int, bool) {
 	return current.data, true
 }
 
-func (list *LinkedList) getSize() int {
+func (list *LinkedList) GetSize() int {
 	count := 0
 	current := list.head
 	for current != nil {
@@ -131,7 +131,7 @@ func (list *LinkedList) getSize() int {
 	return count
 }
 
-func (list *LinkedList) getItemsFromStart() []int {
+func (list *LinkedList) GetItemsFromStart() []int {
 	var items []int
 	current := list.head
 	for current != nil {
@@ -141,7 +141,7 @@ func (list *LinkedList) getItemsFromStart() []int {
 	return items
 }
 
-func (list *LinkedList) getItemsFromEnd() []int {
+func (list *LinkedList) GetItemsFromEnd() []int {
 	var items []int
 	current := list.tail
 	for current != nil {

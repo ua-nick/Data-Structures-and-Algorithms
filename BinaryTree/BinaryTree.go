@@ -12,7 +12,7 @@ type BinaryTree struct {
 	root *Node
 }
 
-func (tree *BinaryTree) insertItem(i int) {
+func (tree *BinaryTree) InsertItem(i int) {
 	if tree.root == nil {
 		tree.root = &Node{data: i}
 		return
@@ -35,7 +35,7 @@ func (tree *BinaryTree) insertItem(i int) {
 	}
 }
 
-func (tree *BinaryTree) searchItem(i int) (*Node, bool) {
+func (tree *BinaryTree) SearchItem(i int) (*Node, bool) {
 	if tree.root == nil {
 		return nil, false
 	}
@@ -52,12 +52,12 @@ func (tree *BinaryTree) searchItem(i int) (*Node, bool) {
 	return nil, false
 }
 
-func (tree *BinaryTree) printItems(subtree *Node) {
+func (tree *BinaryTree) PrintItems(subtree *Node) {
 	if subtree.left != nil {
-		tree.printItems(subtree.left)
+		tree.PrintItems(subtree.left)
 	}
 	fmt.Println(subtree.data)
 	if subtree.right != nil {
-		tree.printItems(subtree.right)
+		tree.PrintItems(subtree.right)
 	}
 }

@@ -7,7 +7,7 @@ type CircularBuffer struct {
 	pointer int
 }
 
-func (b *CircularBuffer) insertValue(i int) {
+func (b *CircularBuffer) InsertValue(i int) {
 	if b.pointer == len(b.data) {
 		b.pointer = 0
 	}
@@ -15,11 +15,11 @@ func (b *CircularBuffer) insertValue(i int) {
 	b.pointer += 1
 }
 
-func (b *CircularBuffer) getValues() [arraySize]int {
+func (b *CircularBuffer) GetValues() [arraySize]int {
 	return b.data
 }
 
-func (b *CircularBuffer) getValuesFromPosition(i int) ([arraySize]int, bool) {
+func (b *CircularBuffer) GetValuesFromPosition(i int) ([arraySize]int, bool) {
 	var out [arraySize]int
 
 	if i >= len(out) {

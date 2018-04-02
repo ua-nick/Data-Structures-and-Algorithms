@@ -9,7 +9,7 @@ type Stack struct {
 	top *Node
 }
 
-func (list *Stack) push(i int) {
+func (list *Stack) Push(i int) {
 	data := &Node{data: i}
 	if list.top != nil {
 		data.next = list.top
@@ -17,7 +17,7 @@ func (list *Stack) push(i int) {
 	list.top = data
 }
 
-func (list *Stack) pop() (int, bool) {
+func (list *Stack) Pop() (int, bool) {
 	if list.top == nil {
 		return 0, false
 	}
@@ -26,14 +26,14 @@ func (list *Stack) pop() (int, bool) {
 	return i, true
 }
 
-func (list *Stack) peek() (int, bool) {
+func (list *Stack) Peek() (int, bool) {
 	if list.top == nil {
 		return 0, false
 	}
 	return list.top.data, true
 }
 
-func (list *Stack) get() []int {
+func (list *Stack) Get() []int {
 
 	var items []int
 
@@ -45,10 +45,10 @@ func (list *Stack) get() []int {
 	return items
 }
 
-func (list *Stack) isEmpty() bool {
+func (list *Stack) IsEmpty() bool {
 	return list.top == nil
 }
 
-func (list *Stack) empty() {
+func (list *Stack) Empty() {
 	list.top = nil
 }

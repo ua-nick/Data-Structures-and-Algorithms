@@ -1,6 +1,6 @@
 package main
 
-func reverseArray(a []int) {
+func ReverseArray(a []int) {
 	i := 0
 	u := len(a) - 1
 	for i < u {

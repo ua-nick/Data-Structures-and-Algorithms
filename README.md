@@ -27,6 +27,7 @@ There are several data structures and algorithms implemented in this project. Th
 - Insertion Sort
 - Bubble Sort
 - Comb Sort
+- Cocktail Sort
 
 ## Usage
 

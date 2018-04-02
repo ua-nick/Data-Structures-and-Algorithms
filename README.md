@@ -28,6 +28,7 @@ There are several data structures and algorithms implemented in this project. Th
 - Bubble Sort
 - Comb Sort
 - Cocktail Sort
+- Gnome Sort
 
 ## Usage
 

@@ -1,0 +1,41 @@
+language: go
+
+go:
+  - "1.9.x"
+  - "1.10.x"
+
+before_script: cd BinarySearch
+script: go test ./
+
+before_script: cd BubbleSort
+script: go test ./
+
+before_script: cd CocktailSort
+script: go test ./
+
+before_script: cd CombSort
+script: go test ./
+
+before_script: cd ExponentialSearch
+script: go test ./
+
+before_script: cd GnomeSort
+script: go test ./
+
+before_script: cd InsertionSort
+script: go test ./
+
+before_script: cd InterpolationSearch
+script: go test ./
+
+before_script: cd JumpSearch
+script: go test ./
+
+before_script: cd LinearSearch
+script: go test ./
+
+before_script: cd SelectionSort
+script: go test ./
+
+before_script: cd TernarySearch
+script: go test ./

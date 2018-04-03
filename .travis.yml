@@ -6,14 +6,14 @@ go:
 
 script:
   cd BinarySearch && go test ./;
-  cd BubbleSort && go test ./;
-  cd CocktailSort && go test ./;
-  cd CombSort && go test ./;
-  cd ExponentialSearch && go test ./;
-  cd GnomeSort && go test ./;
-  cd InsertionSort && go test ./;
-  cd InterpolationSearch && go test ./;
-  cd JumpSearch && go test ./;
-  cd LinearSearch && go test ./;
-  cd SelectionSort && go test ./;
-  cd TernarySearch && go test ./;
+  cd ../BubbleSort && go test ./;
+  cd ../CocktailSort && go test ./;
+  cd ../CombSort && go test ./;
+  cd ../ExponentialSearch && go test ./;
+  cd ../GnomeSort && go test ./;
+  cd ../InsertionSort && go test ./;
+  cd ../InterpolationSearch && go test ./;
+  cd ../JumpSearch && go test ./;
+  cd ../LinearSearch && go test ./;
+  cd ../SelectionSort && go test ./;
+  cd ../TernarySearch && go test ./;

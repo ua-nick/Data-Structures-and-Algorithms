@@ -1,32 +1,33 @@
 package BinarySearch
 
 import (
-	"math/rand"
+	"sort"
 	"testing"
-	"time"
 )
 
 func SortArray(array []int) {
-	for itemIndex, itemValue := range array {
-		for itemIndex != 0 && array[itemIndex-1] > itemValue {
-			array[itemIndex] = array[itemIndex-1]
-			itemIndex -= 1
-		}
-		array[itemIndex] = itemValue
-	}
+	sort.Slice(array, func(i, j int) bool {
+		return array[i] < array[j]
+	})
 }
 
 func TestBinarySearch(t *testing.T) {
-	random := rand.New(rand.NewSource(time.Now().UnixNano()))
-	array := make([]int, random.Intn(100))
-	for i := range array {
-		array[i] = random.Intn(100)
+	testCases := []struct {
+		slice    []int
+		number   int
+		expected int
+	}{
+		{[]int{1, 2, 3, 4, 5}, 2, 1},
+		{[]int{5, 3, 7, 8, 2}, 2, 0},
+		{[]int{5, -1, 7, 8, 2}, 2, 1},
+		{[]int{5, 3, 7, 8, 2}, 9, -1},
 	}
-	SortArray(array)
-	for _, value := range array {
-		result := BinarySearch(array, value)
-		if result == -1 {
-			t.Fail()
+
+	for i, tc := range testCases {
+		SortArray(tc.slice)
+		index := BinarySearch(tc.slice, tc.number)
+		if index != tc.expected {
+			t.Errorf("BinarySearch(%v, %d) test case #%d: expected %d, got %d instead", tc.slice, tc.number, i+1, tc.expected, index)
 		}
 	}
 }

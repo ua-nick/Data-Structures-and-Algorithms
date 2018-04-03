@@ -4,26 +4,16 @@ go:
   - "1.9.x"
   - "1.10.x"
 
-script: cd BinarySearch && go test ./
-
-script: cd BubbleSort && go test ./
-
-script: cd CocktailSort && go test ./
-
-script: cd CombSort && go test ./
-
-script: cd ExponentialSearch && go test ./
-
-script: cd GnomeSort && go test ./
-
-script: cd InsertionSort && go test ./
-
-script: cd InterpolationSearch && go test ./
-
-script: cd JumpSearch && go test ./
-
-script: cd LinearSearch && go test ./
-
-script: cd SelectionSort && go test ./
-
-script: cd TernarySearch && go test ./
+script:
+  cd BinarySearch && go test ./;
+  cd BubbleSort && go test ./;
+  cd CocktailSort && go test ./;
+  cd CombSort && go test ./;
+  cd ExponentialSearch && go test ./;
+  cd GnomeSort && go test ./;
+  cd InsertionSort && go test ./;
+  cd InterpolationSearch && go test ./;
+  cd JumpSearch && go test ./;
+  cd LinearSearch && go test ./;
+  cd SelectionSort && go test ./;
+  cd TernarySearch && go test ./;

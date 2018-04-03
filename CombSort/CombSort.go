@@ -1,4 +1,4 @@
-package main
+package CombSort
 
 func CombSort(array []int) {
 	gapValue := len(array)

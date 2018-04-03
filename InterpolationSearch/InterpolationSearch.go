@@ -1,4 +1,4 @@
-package main
+package InterpolationSearch
 
 func InterpolationSearch(array []int, number int) int {
 	minIndex := 0

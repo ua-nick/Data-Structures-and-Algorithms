@@ -1,4 +1,4 @@
-package main
+package GnomeSort
 
 import (
 	"math/rand"

@@ -1,4 +1,4 @@
-package main
+package StackArray
 
 const arraySize = 10
 

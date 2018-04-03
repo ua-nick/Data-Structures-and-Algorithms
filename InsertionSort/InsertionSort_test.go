@@ -1,4 +1,4 @@
-package main
+package InsertionSort
 
 import (
 	"math/rand"

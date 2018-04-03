@@ -1,4 +1,4 @@
-package main
+package ExponentialSearch
 
 import (
 	"math/rand"

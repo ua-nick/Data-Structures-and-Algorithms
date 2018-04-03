@@ -1,4 +1,4 @@
-package main
+package QueueLinkedList
 
 type Node struct {
 	data int

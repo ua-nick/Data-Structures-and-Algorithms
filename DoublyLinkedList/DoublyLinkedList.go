@@ -1,4 +1,4 @@
-package main
+package DoublyLinkedList
 
 type Node struct {
 	data int

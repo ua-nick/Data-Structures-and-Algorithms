@@ -1,4 +1,4 @@
-package main
+package InsertionSort
 
 func InsertionSort(array []int) {
 	for itemIndex, itemValue := range array {

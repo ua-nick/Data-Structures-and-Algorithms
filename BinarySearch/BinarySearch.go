@@ -1,4 +1,4 @@
-package main
+package BinarySearch
 
 func BinarySearch(array []int, number int) int {
 	minIndex := 0

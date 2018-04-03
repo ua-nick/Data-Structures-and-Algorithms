@@ -1,4 +1,4 @@
-package main
+package TernarySearch
 
 import (
 	"math/rand"

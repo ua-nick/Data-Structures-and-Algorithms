@@ -1,4 +1,4 @@
-package main
+package ExponentialSearch
 
 func ExponentialSearch(array []int, number int) int {
 	boundValue := 1

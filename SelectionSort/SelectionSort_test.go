@@ -1,4 +1,4 @@
-package main
+package SelectionSort
 
 import (
 	"math/rand"

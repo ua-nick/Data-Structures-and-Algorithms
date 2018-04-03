@@ -1,4 +1,4 @@
-package main
+package TernarySearch
 
 func TernarySearch(array []int, number int) int {
 	minIndex := 0

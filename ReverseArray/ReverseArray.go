@@ -1,4 +1,4 @@
-package main
+package ReverseArray
 
 func ReverseArray(a []int) {
 	i := 0

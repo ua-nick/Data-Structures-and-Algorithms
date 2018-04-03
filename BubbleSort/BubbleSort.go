@@ -1,4 +1,4 @@
-package main
+package BubbleSort
 
 func BubbleSort(array []int) {
 	swapCount := 1

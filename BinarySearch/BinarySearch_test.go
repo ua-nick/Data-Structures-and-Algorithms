@@ -1,4 +1,4 @@
-package main
+package BinarySearch
 
 import (
 	"math/rand"

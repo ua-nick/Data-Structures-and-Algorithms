@@ -1,4 +1,4 @@
-package main
+package LinearSearch
 
 import (
 	"math/rand"

@@ -1,4 +1,4 @@
-package main
+package CocktailSort
 
 import (
 	"math/rand"

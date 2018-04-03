@@ -1,4 +1,4 @@
-package main
+package CocktailSort
 
 func CocktailSort(array []int) {
 	swapCount := 1

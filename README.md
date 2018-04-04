@@ -32,6 +32,7 @@ There are several data structures and algorithms implemented in this project. Th
 - Comb Sort
 - Cocktail Sort
 - Gnome Sort
+- Merge Sort
 
 ## Usage
 

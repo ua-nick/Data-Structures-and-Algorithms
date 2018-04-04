@@ -15,5 +15,6 @@ script:
   cd ../InterpolationSearch && go test ./;
   cd ../JumpSearch && go test ./;
   cd ../LinearSearch && go test ./;
+  cd ../MergeSort && go test ./;
   cd ../SelectionSort && go test ./;
   cd ../TernarySearch && go test ./;

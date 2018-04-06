@@ -49,7 +49,7 @@ Don't forget about proverb:
 
 ## Contribute
 
-We would be happy to receive your propositions of improvement ;)
+We would be happy to receive your propositions of improvement! Read [Contributing Guide](https://github.com/floyernick/Data-Structures-and-Algorithms/blob/master/CONTRIBUTING.md) for more details.
 
 ## License
 

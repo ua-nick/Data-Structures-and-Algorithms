@@ -18,3 +18,4 @@ script:
   cd ../MergeSort && go test ./;
   cd ../SelectionSort && go test ./;
   cd ../TernarySearch && go test ./;
+  cd ../NaiveStringSearch && go test ./;

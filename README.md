@@ -26,6 +26,10 @@ There are several data structures and algorithms implemented in this project. Th
 - Exponential Search
 - Ternary Search
 
+##### String searching algorithms
+
+- Naive String Search
+
 ##### Sorting algorithms
 - Selection Sort
 - Insertion Sort

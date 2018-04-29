@@ -16,6 +16,7 @@ There are several data structures and algorithms implemented in this project. Th
 - Queue
 - Binary Tree
 - Hash Table
+- Trie
 
 ##### Searching algorithms
 - Linear Search

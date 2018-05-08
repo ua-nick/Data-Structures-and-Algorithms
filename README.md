@@ -29,6 +29,7 @@ There are several data structures and algorithms implemented in this project. Th
 ##### String searching algorithms
 
 - Naive String Search
+- Rabin-Karp Algorithm
 
 ##### Sorting algorithms
 - Selection Sort

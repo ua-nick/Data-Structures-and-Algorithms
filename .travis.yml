@@ -19,3 +19,4 @@ script:
   cd ../SelectionSort && go test ./;
   cd ../TernarySearch && go test ./;
   cd ../NaiveStringSearch && go test ./;
+  cd ../RabinKarp && go test ./;

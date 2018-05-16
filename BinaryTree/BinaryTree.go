@@ -1,9 +1,10 @@
 package BinaryTree
 
 type Node struct {
-	data  int
-	left  *Node
-	right *Node
+	data   int
+	parent *Node
+	left   *Node
+	right  *Node
 }
 
 type BinaryTree struct {
@@ -19,13 +20,13 @@ func (tree *BinaryTree) InsertItem(i int) {
 	for {
 		if i > currentNode.data {
 			if currentNode.right == nil {
-				currentNode.right = &Node{data: i}
+				currentNode.right = &Node{data: i, parent: currentNode}
 				return
 			}
 			currentNode = currentNode.right
 		} else {
 			if currentNode.left == nil {
-				currentNode.left = &Node{data: i}
+				currentNode.left = &Node{data: i, parent: currentNode}
 				return
 			}
 			currentNode = currentNode.left

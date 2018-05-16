@@ -51,12 +51,32 @@ func (tree *BinaryTree) SearchItem(i int) (*Node, bool) {
 	return nil, false
 }
 
-func (tree *BinaryTree) GetItems(subtree *Node, callback func(int)) {
+func (tree *BinaryTree) InorderTraversal(subtree *Node, callback func(int)) {
 	if subtree.left != nil {
-		tree.GetItems(subtree.left, callback)
+		tree.InorderTraversal(subtree.left, callback)
 	}
 	callback(subtree.data)
 	if subtree.right != nil {
-		tree.GetItems(subtree.right, callback)
+		tree.InorderTraversal(subtree.right, callback)
 	}
+}
+
+func (tree *BinaryTree) PreorderTraversal(subtree *Node, callback func(int)) {
+	callback(subtree.data)
+	if subtree.left != nil {
+		tree.PreorderTraversal(subtree.left, callback)
+	}
+	if subtree.right != nil {
+		tree.PreorderTraversal(subtree.right, callback)
+	}
+}
+
+func (tree *BinaryTree) PostorderTraversal(subtree *Node, callback func(int)) {
+	if subtree.left != nil {
+		tree.PostorderTraversal(subtree.left, callback)
+	}
+	if subtree.right != nil {
+		tree.PostorderTraversal(subtree.right, callback)
+	}
+	callback(subtree.data)
 }

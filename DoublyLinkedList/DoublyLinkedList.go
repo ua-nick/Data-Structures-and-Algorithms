@@ -13,6 +13,11 @@ type LinkedList struct {
 
 func (list *LinkedList) InsertFirst(i int) {
 	data := &Node{data: i}
+	if list.tail == nil {
+		list.head = data
+		list.tail = data
+		return
+	}
 	if list.head != nil {
 		list.head.prev = data
 		data.next = list.head

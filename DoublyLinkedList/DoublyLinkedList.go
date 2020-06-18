@@ -18,20 +18,23 @@ func (list *LinkedList) InsertFirst(i int) {
 		data.next = list.head
 	}
 	list.head = data
+
+	if list.tail == nil{
+		list.tail = data
+	}
 }
 
 func (list *LinkedList) InsertLast(i int) {
 	data := &Node{data: i}
-	if list.head == nil {
-		list.head = data
-		list.tail = data
-		return
-	}
 	if list.tail != nil {
 		list.tail.next = data
 		data.prev = list.tail
 	}
 	list.tail = data
+
+	if list.head == nil {
+		list.head = data
+	}
 }
 
 func (list *LinkedList) RemoveByValue(i int) bool {
@@ -40,7 +43,11 @@ func (list *LinkedList) RemoveByValue(i int) bool {
 	}
 	if list.head.data == i {
 		list.head = list.head.next
-		list.head.prev = nil
+		if list.head != nil {
+			list.head.prev = nil
+		} else {
+			list.tail = nil
+		}
 		return true
 	}
 	if list.tail.data == i {

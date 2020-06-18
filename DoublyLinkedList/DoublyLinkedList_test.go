@@ -39,10 +39,20 @@ func TestLinkedList_GetSize(t *testing.T) {
 	count := 1000
 	for i := 1; i <= count; i++ {
 		ll.InsertFirst(i)
+		if ll.GetSize() != i {
+			t.Fatal()
+		}
 	}
+}
 
-	if ll.GetSize() != count {
-		t.Fatal()
+func TestLinkedList_GetSize2(t *testing.T) {
+	ll := LinkedList{}
+	count := 1000
+	for i := 1; i <= count; i++ {
+		ll.InsertLast(i)
+		if ll.GetSize() != i {
+			t.Fatal()
+		}
 	}
 }
 

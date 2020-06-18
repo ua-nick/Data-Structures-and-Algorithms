@@ -16,6 +16,10 @@ func TestLinkedList_InsertFirst(t *testing.T) {
 			t.Fatalf("GetFirst Error want:%d but return:%d", 1, l)
 		}
 	}
+
+	if ll.GetSize() != 1000{
+		t.Fatal()
+	}
 }
 
 func TestLinkedList_InsertLast(t *testing.T) {
@@ -31,6 +35,10 @@ func TestLinkedList_InsertLast(t *testing.T) {
 		if l, _ = ll.GetFirst(); l != 1 {
 			t.Fatalf("GetFirst Error want:%d but return:%d", 1, l)
 		}
+	}
+
+	if ll.GetSize() != 1000{
+		t.Fatal()
 	}
 }
 
@@ -147,6 +155,10 @@ func TestLinkedList_RemoveByValue(t *testing.T) {
 			t.Fatal()
 		}
 	}
+
+	if ll.GetSize() > 0 {
+		t.Fatal()
+	}
 }
 
 func TestLinkedList_RemoveByValue1(t *testing.T) {
@@ -161,6 +173,10 @@ func TestLinkedList_RemoveByValue1(t *testing.T) {
 		if ll.SearchValue(i) {
 			t.Fatal()
 		}
+	}
+
+	if ll.GetSize() > 0 {
+		t.Fatal()
 	}
 }
 
@@ -178,6 +194,10 @@ func TestLinkedList_RemoveByIndex(t *testing.T) {
 			t.Fatal()
 		}
 	}
+
+	if ll.GetSize() > 0 {
+		t.Fatal()
+	}
 }
 
 func TestLinkedList_RemoveByIndex2(t *testing.T) {
@@ -193,5 +213,9 @@ func TestLinkedList_RemoveByIndex2(t *testing.T) {
 		if ll.SearchValue(i) {
 			t.Fatal()
 		}
+	}
+
+	if ll.GetSize() > 0 {
+		t.Fatal()
 	}
 }

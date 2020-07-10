@@ -113,11 +113,7 @@ func (list *LinkedList) GetLast() (int, bool) {
 	if list.head == nil {
 		return 0, false
 	}
-	current := list.head
-	for current.next != nil {
-		current = current.next
-	}
-	return current.data, true
+	return list.tail.data, true
 }
 
 func (list *LinkedList) GetSize() int {

@@ -1,45 +1,52 @@
-package MergeSort
 
-func mergeParts(array []int, leftIndex, divideIndex, rightIndex int) {
-	var tempArray1, tempArray2 []int
-	for i := leftIndex; i <= divideIndex; i++ {
-		tempArray1 = append(tempArray1, array[i])
-	}
-	for i := divideIndex + 1; i <= rightIndex; i++ {
-		tempArray2 = append(tempArray2, array[i])
-	}
-	arrayIndex := leftIndex
-	tempArray1Index := 0
-	tempArray2Index := 0
-	for tempArray1Index != len(tempArray1) && tempArray2Index != len(tempArray2) {
-		if tempArray1[tempArray1Index] <= tempArray2[tempArray2Index] {
-			array[arrayIndex] = tempArray1[tempArray1Index]
-			tempArray1Index += 1
-		} else {
-			array[arrayIndex] = tempArray2[tempArray2Index]
-			tempArray2Index += 1
-		}
-		arrayIndex += 1
-	}
-	for tempArray1Index < len(tempArray1) {
-		array[arrayIndex] = tempArray1[tempArray1Index]
-		tempArray1Index += 1
-		arrayIndex += 1
-
-	}
-	for tempArray2Index < len(tempArray2) {
-		array[arrayIndex] = tempArray2[tempArray2Index]
-		tempArray2Index += 1
-		arrayIndex += 1
-	}
+func MergeSort(array []int) []int {
+    return mergeSort(array)
 }
 
-func MergeSort(array []int, leftIndex, rightIndex int) {
-	if leftIndex >= rightIndex {
-		return
-	}
-	divideIndex := int((leftIndex + rightIndex) / 2)
-	MergeSort(array, leftIndex, divideIndex)
-	MergeSort(array, divideIndex+1, rightIndex)
-	mergeParts(array, leftIndex, divideIndex, rightIndex)
+//归并排序
+func mergeSort(srcArray []int) []int {
+    //如果数组长度小于2则不需要排序，直接返回
+    if len(srcArray) < 2 {
+        return srcArray
+    }
+    
+    //分割数组为两份
+    split := len(srcArray) / 2
+    arr1 := mergeSort(srcArray[:split])
+    arr2 := mergeSort(srcArray[split:])
+    
+    //获取原始数组的总长
+    totalLen := len(srcArray)
+    return mergeParts(arr1, arr2, totalLen)
+}
+
+//归并两块数组
+func mergeParts(arr1, arr2 []int, totalLen int) []int {
+    left, right := 0, 0
+    res := make([]int, totalLen)
+    i := 0
+    for i < totalLen {
+        switch true {
+        case left >= len(arr1):
+            res[i] = arr2[right]
+            right++
+        case right >= len(arr2):
+            res[i] = arr2[left]
+            left++
+        default:
+            if arr1[left] > arr2[right] {
+                
+                res[i] = arr2[right]
+                right++
+                
+            } else {
+                
+                res[i] = arr2[left]
+                left++
+                
+            }
+        }
+        i++
+    }
+    return res
 }

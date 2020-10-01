@@ -1,14 +1,14 @@
 package BubbleSort
 
 func BubbleSort(array []int) {
-	swapCount := 1
-	for swapCount > 0 {
-		swapCount = 0
-		for itemIndex := 0; itemIndex < len(array)-1; itemIndex++ {
-			if array[itemIndex] > array[itemIndex+1] {
-				array[itemIndex], array[itemIndex+1] = array[itemIndex+1], array[itemIndex]
-				swapCount += 1
-			}
+	//pass is a variable which starts from the end of the array
+	//i variable starts from starting of the array
+	for(int pass=n-1;pass>=0;pass--)
+	{
+		for(int i=0;i<=pass;i++)
+		{
+			if(array[i]>array[i+1])
+			swap (array[i], array[i+1]);
 		}
 	}
 }

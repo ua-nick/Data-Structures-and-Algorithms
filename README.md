@@ -39,6 +39,7 @@ There are several data structures and algorithms implemented in this project. Th
 - Cocktail Sort
 - Gnome Sort
 - Merge Sort
+- Radix Sort
 
 ## Usage
 
